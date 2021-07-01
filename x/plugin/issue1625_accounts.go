@@ -13,7 +13,7 @@ type issue1625Accounts struct {
 
 func NewIssue1625Accounts() ([]issue1625Accounts, error) {
 	var accounts = [][]string{
-		{"atp1eshshnxuva6f4zqmwj9xszfj65y5vhalr7nyed", "9991365936677426200750"},
+		/*{"atp1eshshnxuva6f4zqmwj9xszfj65y5vhalr7nyed", "9991365936677426200750"},
 		{"atp166ue9gzupre59qsj9xvdxjwrzdrheentp9xlue", "2000000000000000000000"},
 		{"atp13fd8zf6gp8jjn46uvlr5q5ayz73qgpzrzcwfdv", "4900000000000000000000"},
 		{"atp15ftdv7s5sn7tswnqwegaxrdzhh9cezyaeuv7us", "9991321838252569163750"},
@@ -60,7 +60,7 @@ func NewIssue1625Accounts() ([]issue1625Accounts, error) {
 		{"atp1npnfxe5gfcczw2659p4pk2ezwrprgvmjruhzfq", "10000000000000000000000"},
 		{"atp1225wvv6ug5y28dp0rrr8w9nxedkm8hcglfnk0d", "10000000000000000000000"},
 		{"atp1s3rfmcmm4zdz529rvwuagfvqrq5c44e2ja46kz", "10000000000000000000000"},
-		{"atp1fnehxk8jcwaquerf4trx03l9na7a56yyfcjklh", "10000000000000000000000"},
+		{"atp1fnehxk8jcwaquerf4trx03l9na7a56yyfcjklh", "10000000000000000000000"},*/
 	}
 	Accounts := make([]issue1625Accounts, 0)
 	for _, info := range accounts {
