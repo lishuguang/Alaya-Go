@@ -69,10 +69,14 @@ func newIssue1583Accounts() ([]issue1583Accounts, error) {
 
 	//node f2ec2830850  in Epoch216
 	node1DelegationInfo := []delegationInfo{
-		{"atp1g004udw6gy2z2vc4t5d7a77qdrlx3nk07ce9fv", "1000000000000000000"},
+		{"atp1evctymqxg8w53la3mqpc726kq0lqchzytwnmvm", "1000000000000000000"},
+		{"atp1gxl4cfearl3y2ducgckurkxvsmz3msjjmaqrhn", "1000000000000000000"},
+		{"atp10he0qsx299tkqvrtmk5kj07nz5702hz4czcx2r", "1000000000000000000"},
+		{"atp13nfkmjq3lzyykn3ah2a5q4f9yaw98hxqq942vc", "1000000000000000000"},
+
 	}
-	node1DelegationAmount, _ := new(big.Int).SetString("3000000000000000000", 10)
-	node1DelegationReward, _ := new(big.Int).SetString("2201704545454545454526", 10)
+	node1DelegationAmount, _ := new(big.Int).SetString("5000000000000000000", 10)
+	node1DelegationReward, _ := new(big.Int).SetString("207219251336898395721907", 10)
 	node1RewardPer := reward.DelegateRewardPer{
 		Delegate: node1DelegationAmount,
 		Reward:   node1DelegationReward,
@@ -94,12 +98,17 @@ func newIssue1583Accounts() ([]issue1583Accounts, error) {
 
 	//fff1010bbf176 in epoch475
 	node2DelegationInfos := []delegationInfo{
-		{"atp1zc3k2zd7j72d3h045h43hgzgy8wsvan2lnpegt", "2000000000000000000"},
-		{"atp13t9ml06m5q5p6yl277xagwhl734zhl2dteywzw", "2000000000000000000"},
+		{"atp1xcwvc4a3tue68vdl3elsnemdztphl6az859y32", "1000000000000000000"},
+		{"atp1l257mw2674zk66s6xk5rg7cs6d3cwfld7su9r2", "1000000000000000000"},
+		{"atp199qxhgq62cyesq8ffjuwpy75rndqhyhfyxmqtv", "1000000000000000000"},
+		{"atp1edv6889u0paxzvj0kwgzchktlwduu4m73xp24d", "1000000000000000000"},
+		{"atp1yanf79gl46gh7quan8thq572yd3wvuukhjxy8s", "1000000000000000000"},
+		{"atp18nlw6pljswwdcjch9zy2c7r00uzdystcel3j4r", "1000000000000000000"},
+
 	}
 
-	node2DelegationAmount, _ := new(big.Int).SetString("8000000000000000000", 10)
-	node2DelegationReward, _ := new(big.Int).SetString("1491477272727272727266", 10)
+	node2DelegationAmount, _ := new(big.Int).SetString("7000000000000000000", 10)
+	node2DelegationReward, _ := new(big.Int).SetString("173796791443850267379667", 10)
 	node2RewardPer := reward.DelegateRewardPer{
 		Delegate: node2DelegationAmount,
 		Reward:   node2DelegationReward,
