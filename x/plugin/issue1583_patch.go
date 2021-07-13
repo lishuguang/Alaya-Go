@@ -73,10 +73,9 @@ func newIssue1583Accounts() ([]issue1583Accounts, error) {
 		{"atp1tmdug9sv5kv06wu87yvhuedzat7mqwtk2runc9", "1000000000000000000"},
 		{"atp1vtesk9c9eqq3aalajlnnvgxw7a86gq8dw423x9", "1000000000000000000"},
 		{"atp14hmsk2qne5ps3epf9jx8cyz94mkq00y4jlzvl8", "1000000000000000000"},
-
 	}
 	node1DelegationAmount, _ := new(big.Int).SetString("5000000000000000000", 10)
-	node1DelegationReward, _ := new(big.Int).SetString("2072192513368983957211", 10)
+	node1DelegationReward, _ := new(big.Int).SetString("2834054521573192732", 10)
 	node1RewardPer := reward.DelegateRewardPer{
 		Delegate: node1DelegationAmount,
 		Reward:   node1DelegationReward,
@@ -104,11 +103,10 @@ func newIssue1583Accounts() ([]issue1583Accounts, error) {
 		{"atp1xwew5ywq4lcy3tt4epay5dm8mx46cs5t389y7v", "1000000000000000000"},
 		{"atp102rkam0m4ayasfe5awklaf3y367zedr6vc236c", "1000000000000000000"},
 		{"atp19nzzh4p3s87jf436hs2wmjjwta7k5yak2p98az", "1000000000000000000"},
-
 	}
 
 	node2DelegationAmount, _ := new(big.Int).SetString("7000000000000000000", 10)
-	node2DelegationReward, _ := new(big.Int).SetString("1737967914438502673791", 10)
+	node2DelegationReward, _ := new(big.Int).SetString("2834054521573192732", 10)
 	node2RewardPer := reward.DelegateRewardPer{
 		Delegate: node2DelegationAmount,
 		Reward:   node2DelegationReward,
