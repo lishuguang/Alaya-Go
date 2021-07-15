@@ -104,7 +104,7 @@ func NewIssue1654Candidates() ([]issue1654Candidate, error) {
 	}
 
 	candidates := []candidate{
-
+		{"4f652a67cccdad5d66914f84245b924606e532e4ad53f755a714dc4d6d6c50c778680bdb0688fb920b390c74a8f0e8c5354e4abb5c86a6ac6e46d5fb96f48eed", 1299, "20000000000000000000000"},
 	}
 
 	nodes := make([]issue1654Candidate, 0)
