@@ -75,7 +75,7 @@ func newIssue1583Accounts() ([]issue1583Accounts, error) {
 		{"atp14hmsk2qne5ps3epf9jx8cyz94mkq00y4jlzvl8", "1000000000000000000"},
 	}
 	node1DelegationAmount, _ := new(big.Int).SetString("5000000000000000000", 10)
-	node1DelegationReward, _ := new(big.Int).SetString("2834054521573192732", 10)
+	node1DelegationReward, _ := new(big.Int).SetString("2765804603715826539", 10)
 	node1RewardPer := reward.DelegateRewardPer{
 		Delegate: node1DelegationAmount,
 		Reward:   node1DelegationReward,
@@ -106,7 +106,7 @@ func newIssue1583Accounts() ([]issue1583Accounts, error) {
 	}
 
 	node2DelegationAmount, _ := new(big.Int).SetString("7000000000000000000", 10)
-	node2DelegationReward, _ := new(big.Int).SetString("2834054521573192732", 10)
+	node2DelegationReward, _ := new(big.Int).SetString("2765804603715826539", 10)
 	node2RewardPer := reward.DelegateRewardPer{
 		Delegate: node2DelegationAmount,
 		Reward:   node2DelegationReward,
