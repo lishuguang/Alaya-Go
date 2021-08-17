@@ -817,22 +817,34 @@ func (self *StateDB) TxIdx() uint32 {
 	return uint32(self.txIndex)
 }
 
-func (db *StateDB) ForEachStorage(addr common.Address, cb func(key, value []byte) bool) {
+func (db *StateDB) ForEachStorage(addr common.Address, cb func(key, value common.Hash) bool) error {
 	so := db.getStateObject(addr)
 	if so == nil {
-		return
+		return nil
 	}
 
 	it := trie.NewIterator(so.getTrie(db.db).NodeIterator(nil))
+
 	for it.Next() {
 		key := db.trie.GetKey(it.Key)
 		if value, ok := so.dirtyStorage[string(key)]; ok {
 			cb(key, value)
+			if !cb(key, value) {
+				return nil
+			}
 			continue
 		}
-
-		cb(key, it.Value)
+		if len(it.Value) > 0 {
+			_, content, _, err := rlp.Split(it.Value)
+			if err != nil {
+				return err
+			}
+			if !cb(key, common.BytesToHash(content)) {
+				return nil
+			}
+		}
 	}
+	return nil
 }
 
 func (db *StateDB) MigrateStorage(from, to common.Address) {
