@@ -115,10 +115,9 @@ func New(ctx *node.ServiceContext, config *eth.Config) (*LightEthereum, error) {
 		bloomRequests:  make(chan chan *bloombits.Retrieval),
 		bloomIndexer:   eth.NewBloomIndexer(chainDb, params.BloomBitsBlocksClient, params.HelperTrieConfirmations),
 	}
-
-	leth.relay = NewLesTxRelay(peers, leth.reqDist)
 	leth.serverPool = newServerPool(chainDb, quitSync, &leth.wg)
 	leth.retriever = newRetrieveManager(peers, leth.reqDist, leth.serverPool)
+	leth.relay = NewLesTxRelay(peers, leth.retriever)
 
 	leth.odr = NewLesOdr(chainDb, light.DefaultClientIndexerConfig, leth.retriever)
 	leth.chtIndexer = light.NewChtIndexer(chainDb, leth.odr, params.CHTFrequency, params.HelperTrieConfirmations)
@@ -225,6 +224,7 @@ func (s *LightEthereum) Start(srvr *p2p.Server) error {
 // Ethereum protocol.
 func (s *LightEthereum) Stop() error {
 	s.odr.Stop()
+	s.relay.Stop()
 	s.bloomIndexer.Close()
 	s.chtIndexer.Close()
 	s.blockchain.Stop()

@@ -26,8 +26,6 @@ import (
 	"io"
 
 	"github.com/AlayaNetwork/Alaya-Go/common"
-	"github.com/AlayaNetwork/Alaya-Go/core"
-	"github.com/AlayaNetwork/Alaya-Go/core/rawdb"
 	"github.com/AlayaNetwork/Alaya-Go/crypto"
 	"github.com/AlayaNetwork/Alaya-Go/rlp"
 )
@@ -219,9 +217,3 @@ type CodeData []struct {
 }
 
 type proofsData [][]rlp.RawValue
-
-type txStatus struct {
-	Status core.TxStatus
-	Lookup *rawdb.LegacyTxLookupEntry `rlp:"nil"`
-	Error  string
-}
